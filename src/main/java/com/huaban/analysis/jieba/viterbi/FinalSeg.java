@@ -36,13 +36,13 @@ public class FinalSeg {
     public synchronized static FinalSeg getInstance() {
         if (null == singleInstance) {
             singleInstance = new FinalSeg();
-            singleInstance.loadModel();
+            singleInstance.loadentity();
         }
         return singleInstance;
     }
 
 
-    private void loadModel() {
+    private void loadentity() {
         long s = System.currentTimeMillis();
         prevStatus = new HashMap<Character, char[]>();
         prevStatus.put('B', new char[] { 'E', 'S' });
@@ -92,7 +92,7 @@ public class FinalSeg {
             }
         }
         catch (IOException e) {
-            System.err.println(String.format(Locale.getDefault(), "%s: load model failure!", PROB_EMIT));
+            System.err.println(String.format(Locale.getDefault(), "%s: load entity failure!", PROB_EMIT));
         }
         finally {
             try {
@@ -103,7 +103,7 @@ public class FinalSeg {
                 System.err.println(String.format(Locale.getDefault(), "%s: close failure!", PROB_EMIT));
             }
         }
-        System.out.println(String.format(Locale.getDefault(), "model load finished, time elapsed %d ms.",
+        System.out.println(String.format(Locale.getDefault(), "entity load finished, time elapsed %d ms.",
             System.currentTimeMillis() - s));
     }
 

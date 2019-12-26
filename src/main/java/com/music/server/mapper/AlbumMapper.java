@@ -1,7 +1,7 @@
 package com.music.server.mapper;
 
 
-import com.music.server.model.Album;
+import com.music.server.entity.Album;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 

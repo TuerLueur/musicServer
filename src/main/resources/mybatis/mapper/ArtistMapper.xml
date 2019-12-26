@@ -2,24 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.music.server.mapper.ArtistMapper">
 
-    <resultMap id="artistMap" type="com.music.server.model.Artist">
-        <result column="aid" jdbcType="BIGINT" property="aid"/>
-        <result column="name" jdbcType="VARCHAR" property="name"/>
+    <resultMap id="artistMap" type="com.music.server.entity.Artist">
+        <result column="artist_id" jdbcType="BIGINT" property="id"/>
+        <result column="artist_name" jdbcType="VARCHAR" property="name"/>
     </resultMap>
 
-    <sql id="artistColumn">
-       a.aid, a.name
-    </sql>
-
     <select id="searchArtistByName" resultMap="artistMap" parameterType="String">
-        SELECT <include refid="artistColumn"/>
+        SELECT a.id, a.name
         FROM artist a
         WHERE a.name LIKE "%"#{name}"%"
     </select>
 
-    <select id="getArtistNameBySid" resultType="String" parameterType="java.math.BigInteger">
-        SELECT a.name
-        FROM artist a, song s
-        WHERE a.ais = s.aid
-    </select>
 </mapper>

@@ -1,7 +1,7 @@
 package com.music.server.service.impl;
 
 import com.music.server.mapper.ArtistMapper;
-import com.music.server.model.Artist;
+import com.music.server.entity.Artist;
 import com.music.server.service.ArtistService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

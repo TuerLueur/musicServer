@@ -1,7 +1,9 @@
 package com.music.server.controller;
 
-import com.music.server.model.Song;
-import com.music.server.model.SongComment;
+import com.music.server.entity.Song;
+import com.music.server.entity.SongComment;
+import com.music.server.entity.SongInfoVO;
+import com.music.server.service.SongInfoVOService;
 import com.music.server.service.SongService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

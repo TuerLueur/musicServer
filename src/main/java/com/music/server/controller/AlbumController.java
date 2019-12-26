@@ -1,6 +1,6 @@
 package com.music.server.controller;
 
-import com.music.server.model.Album;
+import com.music.server.entity.Album;
 import com.music.server.service.AlbumService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

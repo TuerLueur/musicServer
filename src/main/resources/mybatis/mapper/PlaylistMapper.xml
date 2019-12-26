@@ -2,21 +2,21 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.music.server.mapper.PlaylistMapper">
 
-    <resultMap id="playlistMap" type="com.music.server.model.Playlist">
-        <result column="pid" jdbcType="BIGINT" property="pid"/>
-        <result column="name" jdbcType="VARCHAR" property="name"/>
-        <result column="tag" jdbcType="VARCHAR" property="tag"/>
-        <result column="cover" jdbcType="VARCHAR" property="cover"/>
+    <resultMap id="playlistMap" type="com.music.server.entity.Playlist">
+        <result column="playlist_id" jdbcType="BIGINT" property="id"/>
+        <result column="playlist_name" jdbcType="VARCHAR" property="name"/>
+        <result column="playlist_tag" jdbcType="VARCHAR" property="tag"/>
+        <result column="playlist_img_src" jdbcType="VARCHAR" property="img_src"/>
     </resultMap>
 
     <sql id="playlistColumn">
-       p.pid, p.name, p.tag, p.cover
+       p.id, p.name, p.tag, p.img_src
     </sql>
 
     <select id="getPlaylistById" resultMap="playlistMap" parameterType="java.math.BigInteger">
         SELECT <include refid="playlistColumn"/>
         FROM playlist p
-        WHERE p.pid = #{pid}
+        WHERE p.id = #{pid}
     </select>
 
     <select id="multiFilterPlaylist" resultMap="playlistMap" parameterType="java.lang.String">

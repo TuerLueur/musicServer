@@ -1,7 +1,7 @@
 package com.music.server.service;
 
-import com.music.server.model.Song;
-import com.music.server.model.SongComment;
+import com.music.server.entity.Song;
+import com.music.server.entity.SongComment;
 
 import java.math.BigInteger;
 import java.util.List;

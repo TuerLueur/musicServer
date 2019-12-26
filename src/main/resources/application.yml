@@ -1,7 +1,7 @@
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml
   mapper-locations: classpath:mybatis/mapper/*.xml
-  type-aliases-package: com.music.server.model
+  type-aliases-package: com.music.server.entity
 server:
   port: 8888
 spring:

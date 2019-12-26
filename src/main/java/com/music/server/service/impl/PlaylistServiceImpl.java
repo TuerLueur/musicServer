@@ -1,7 +1,7 @@
 package com.music.server.service.impl;
 
 import com.music.server.mapper.PlaylistMapper;
-import com.music.server.model.Playlist;
+import com.music.server.entity.Playlist;
 import com.music.server.service.PlaylistService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
 package com.music.server.service;
 
-import com.music.server.model.Album;
+import com.music.server.entity.Album;
 
 import java.util.List;
 

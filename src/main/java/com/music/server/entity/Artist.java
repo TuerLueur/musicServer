@@ -1,4 +1,4 @@
-package com.music.server.model;
+package com.music.server.entity;
 
 import lombok.Data;
 import lombok.experimental.Accessors;

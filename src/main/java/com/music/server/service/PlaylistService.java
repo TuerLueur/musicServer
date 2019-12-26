@@ -1,6 +1,6 @@
 package com.music.server.service;
 
-import com.music.server.model.Playlist;
+import com.music.server.entity.Playlist;
 
 import java.math.BigInteger;
 import java.util.List;

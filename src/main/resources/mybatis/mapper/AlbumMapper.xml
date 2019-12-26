@@ -2,18 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.music.server.mapper.AlbumMapper">
 
-    <resultMap id="albumMap" type="com.music.server.model.Album">
-        <result column="bid" jdbcType="BIGINT" property="bid"/>
-        <result column="name" jdbcType="VARCHAR" property="name"/>
-        <result column="pic" jdbcType="VARCHAR" property="pic"/>
+    <resultMap id="albumMap" type="com.music.server.entity.Album">
+        <result column="album_id" jdbcType="BIGINT" property="id"/>
+        <result column="album_name" jdbcType="VARCHAR" property="name"/>
+        <result column="album_img_src" jdbcType="VARCHAR" property="img_src"/>
     </resultMap>
 
-    <sql id="albumColumn">
-       b.bid, b.name, b.pic
-    </sql>
-
     <select id="searchAlbumByName" resultMap="albumMap" parameterType="String">
-        SELECT <include refid="albumColumn"/>
+        SELECT b.id, b.name, b.img_src
         FROM album b
         WHERE b.name LIKE "%"#{name}"%"
     </select>

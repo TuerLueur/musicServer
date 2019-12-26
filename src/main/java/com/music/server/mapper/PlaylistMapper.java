@@ -1,7 +1,7 @@
 package com.music.server.mapper;
 
 
-import com.music.server.model.Playlist;
+import com.music.server.entity.Playlist;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
