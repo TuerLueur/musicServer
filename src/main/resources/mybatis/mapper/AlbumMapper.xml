@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.music.server.mapper.AlbumMapper">
+
+    <resultMap id="albumMap" type="com.music.server.model.Album">
+        <result column="bid" jdbcType="BIGINT" property="bid"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="pic" jdbcType="VARCHAR" property="pic"/>
+    </resultMap>
+
+    <sql id="albumColumn">
+       b.bid, b.name, b.pic
+    </sql>
+
+    <select id="searchAlbumByName" resultMap="albumMap" parameterType="String">
+        SELECT <include refid="albumColumn"/>
+        FROM album b
+        WHERE b.name LIKE "%"#{name}"%"
+    </select>
+</mapper>

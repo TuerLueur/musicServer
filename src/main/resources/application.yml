@@ -1,0 +1,14 @@
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.music.server.model
+server:
+  port: 8888
+spring:
+  application:
+    name: server
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: Isen_11210113
+    url: jdbc:mysql://127.0.0.1:3306/music?characterEncoding=utf8&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
