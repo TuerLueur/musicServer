@@ -22,12 +22,6 @@ public class SongController {
     @Autowired
     private SongService songService;
 
-    @GetMapping(value = "/searchSongByName")
-    public List<Song> searchSongByName(String name){
-
-        return songService.searchSongByName(name);
-    }
-
     @GetMapping(value = "/getCommentMapById")
     public List<SongComment> getCommentMapById(BigInteger sid){
         System.out.println("------------------------------------");

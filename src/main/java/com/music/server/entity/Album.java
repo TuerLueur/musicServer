@@ -8,7 +8,7 @@ import java.math.BigInteger;
 @Data
 @Accessors(chain = true)
 public class Album {
-    BigInteger bid;
+    BigInteger id;
     String name;
-    String pic;
+    String img_src;
 }

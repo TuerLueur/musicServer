@@ -9,6 +9,6 @@ import java.math.BigInteger;
 @Data
 @Accessors(chain = true)
 public class Artist {
-    BigInteger aid;
+    BigInteger id;
     String name;
 }

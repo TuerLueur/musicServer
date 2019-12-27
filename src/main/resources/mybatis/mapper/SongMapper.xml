@@ -9,12 +9,6 @@
         <result column="comments" jdbcType="VARCHAR" property="comments"/>
     </resultMap>
 
-    <select id="searchSongByName" resultMap="songMap" parameterType="String">
-        SELECT s.id, s.name, s.artist_id
-        FROM song s
-        WHERE s.name LIKE "%"#{name}"%"
-    </select>
-
     <select id="getCommentsById" resultType="String" parameterType="java.math.BigInteger">
         SELECT s.comments
         FROM song s

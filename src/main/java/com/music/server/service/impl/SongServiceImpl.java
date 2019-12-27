@@ -18,12 +18,6 @@ public class SongServiceImpl implements SongService {
     private SongMapper songMapper;
 
     @Override
-    public List<Song> searchSongByName(String name){
-
-        return songMapper.searchSongByName(name);
-    }
-
-    @Override
     public List<SongComment> getCommentMapById(BigInteger sid){
         String comments = (songMapper.getCommentsById(sid));
         int topN=16;

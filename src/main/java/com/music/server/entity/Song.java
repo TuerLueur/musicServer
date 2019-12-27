@@ -9,7 +9,7 @@ import java.math.BigInteger;
 @Data
 @Accessors(chain = true)
 public class Song {
-    BigInteger song_id;
+    BigInteger id;
     String song_name;
     BigInteger artist_id;
     String lyric;

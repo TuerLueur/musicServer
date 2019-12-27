@@ -7,7 +7,6 @@ import java.math.BigInteger;
 import java.util.List;
 
 public interface SongService {
-    List<Song> searchSongByName(String name);
 
     List<SongComment> getCommentMapById(BigInteger sid);
 }

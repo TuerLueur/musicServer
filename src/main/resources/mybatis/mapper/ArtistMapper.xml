@@ -3,8 +3,8 @@
 <mapper namespace="com.music.server.mapper.ArtistMapper">
 
     <resultMap id="artistMap" type="com.music.server.entity.Artist">
-        <result column="artist_id" jdbcType="BIGINT" property="id"/>
-        <result column="artist_name" jdbcType="VARCHAR" property="name"/>
+        <result column="id" jdbcType="BIGINT" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
     </resultMap>
 
     <select id="searchArtistByName" resultMap="artistMap" parameterType="String">

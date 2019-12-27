@@ -3,9 +3,9 @@
 <mapper namespace="com.music.server.mapper.AlbumMapper">
 
     <resultMap id="albumMap" type="com.music.server.entity.Album">
-        <result column="album_id" jdbcType="BIGINT" property="id"/>
-        <result column="album_name" jdbcType="VARCHAR" property="name"/>
-        <result column="album_img_src" jdbcType="VARCHAR" property="img_src"/>
+        <result column="id" jdbcType="BIGINT" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="img_src" jdbcType="VARCHAR" property="img_src"/>
     </resultMap>
 
     <select id="searchAlbumByName" resultMap="albumMap" parameterType="String">

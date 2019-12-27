@@ -12,6 +12,5 @@ import java.util.List;
 @Repository
 public interface SongMapper {
 
-    List<Song> searchSongByName(String name);
     String getCommentsById(BigInteger sid);
 }

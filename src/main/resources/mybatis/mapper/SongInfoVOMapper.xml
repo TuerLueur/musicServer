@@ -3,13 +3,14 @@
 <mapper namespace="com.music.server.mapper.SongInfoVOMapper">
 
     <resultMap id="songInfoVOMap" type="com.music.server.entity.SongInfoVO">
-        <result column="s.name" jdbcType="BIGINT" property="song_name"/>
-        <result column="a.name" jdbcType="VARCHAR" property="artist_name"/>
-        <result column="b.name" jdbcType="BIGINT" property="album_name"/>
+        <result column="id" jdbcType="BIGINT" property="id"/>
+        <result column="song_name" jdbcType="VARCHAR" property="song_name"/>
+        <result column="artist_name" jdbcType="VARCHAR" property="artist_name"/>
+        <result column="album_name" jdbcType="BIGINT" property="album_name"/>
     </resultMap>
 
     <select id="getSongByName" resultMap="songInfoVOMap" parameterType="String">
-        SELECT s.name, a.name, b.name
+        SELECT s.id, s.name 'song_name', a.name 'artist_name', b.name 'album_name'
         FROM song s, artist a, album b
         WHERE s.name LIKE "%"#{name}"%"
         AND s.artist_id = a.id

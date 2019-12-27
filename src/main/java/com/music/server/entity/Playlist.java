@@ -11,8 +11,8 @@ import java.util.List;
 @Data
 @Accessors(chain = true)
 public class Playlist {
-    BigInteger pid;
+    BigInteger id;
     String name;
     String tag;
-    String cover;
+    String img_src;
 }

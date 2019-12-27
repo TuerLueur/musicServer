@@ -3,10 +3,10 @@
 <mapper namespace="com.music.server.mapper.PlaylistMapper">
 
     <resultMap id="playlistMap" type="com.music.server.entity.Playlist">
-        <result column="playlist_id" jdbcType="BIGINT" property="id"/>
-        <result column="playlist_name" jdbcType="VARCHAR" property="name"/>
-        <result column="playlist_tag" jdbcType="VARCHAR" property="tag"/>
-        <result column="playlist_img_src" jdbcType="VARCHAR" property="img_src"/>
+        <result column="id" jdbcType="BIGINT" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="tag" jdbcType="VARCHAR" property="tag"/>
+        <result column="img_src" jdbcType="VARCHAR" property="img_src"/>
     </resultMap>
 
     <sql id="playlistColumn">
