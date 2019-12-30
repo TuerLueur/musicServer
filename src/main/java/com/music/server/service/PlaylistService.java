@@ -9,4 +9,6 @@ public interface PlaylistService {
     List<Playlist> getPlaylistById(BigInteger pid);
 
     List<Playlist> multiFilterPlaylist(List<String> tags);
+
+    List<Playlist> getRandomPlaylists();
 }

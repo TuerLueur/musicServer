@@ -15,4 +15,6 @@ public interface PlaylistMapper {
     List<Playlist> getPlaylistById(BigInteger pid);
 
     List<Playlist> multiFilterPlaylist(String tag);
+
+    List<Playlist> getRandomPlaylists(int limit);
 }

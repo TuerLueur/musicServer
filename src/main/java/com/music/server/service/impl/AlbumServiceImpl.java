@@ -6,6 +6,7 @@ import com.music.server.service.AlbumService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigInteger;
 import java.util.List;
 
 @Service("AlbumService")
@@ -17,5 +18,11 @@ public class AlbumServiceImpl implements AlbumService {
     public List<Album> searchAlbumByName(String name){
 
         return albumMapper.searchAlbumByName(name);
+    }
+
+    @Override
+    public List<Album> getAlbumByArtistId(BigInteger aid){
+
+        return albumMapper.getAlbumByArtistId(aid);
     }
 }

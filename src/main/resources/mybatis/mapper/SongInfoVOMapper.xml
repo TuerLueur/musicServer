@@ -17,4 +17,16 @@
         AND s.album_id = b.id
     </select>
 
+    <select id="getListSongs" resultMap="songInfoVOMap" parameterType="java.math.BigInteger">
+        SELECT s.id, s.name 'song_name', a.name 'artist_name', b.name 'album_name'
+        FROM song s, artist a, album b
+        WHERE s.artist_id = a.id
+        AND s.album_id = b.id
+        AND s.id IN(
+          SELECT song_id
+          FROM playlist_song ps, playlist p
+          WHERE p.id = ps.playlist_id
+            AND ps.playlist_id = #{pid})
+    </select>
+
 </mapper>

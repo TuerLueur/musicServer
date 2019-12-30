@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.math.BigInteger;
 import java.util.List;
 
 @RestController
@@ -18,5 +19,10 @@ public class AlbumController {
     @GetMapping(value = "/searchAlbumByName")
     public List<Album> searchAlbumByName(String name){
         return albumService.searchAlbumByName(name);
+    }
+
+    @GetMapping(value = "/getAlbumByArtistId")
+    public List<Album> getAlbumByArtistId(BigInteger aid){
+        return albumService.getAlbumByArtistId(aid);
     }
 }

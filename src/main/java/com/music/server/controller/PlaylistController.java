@@ -37,4 +37,9 @@ public class PlaylistController {
         System.out.println(playlistService.multiFilterPlaylist(tags).toString());
         return playlistService.multiFilterPlaylist(tags);
     }
+
+    @GetMapping(value = "/getRandomPlaylists")
+    public List<Playlist> getRandomPlaylists(){
+        return playlistService.getRandomPlaylists();
+    }
 }

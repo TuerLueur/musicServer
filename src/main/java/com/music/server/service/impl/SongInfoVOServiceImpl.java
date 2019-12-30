@@ -8,6 +8,7 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigInteger;
 import java.util.List;
 
 @Service
@@ -19,5 +20,10 @@ public class SongInfoVOServiceImpl implements SongInfoVOService {
     public List<SongInfoVO> getSongByName(@Param("name") String name){
         System.out.println(name);
         return songInfoVOMapper.getSongByName(name);
+    }
+
+    @Override
+    public List<SongInfoVO> getListSongs(@Param("pid") BigInteger pid){
+        return songInfoVOMapper.getListSongs(pid);
     }
 }

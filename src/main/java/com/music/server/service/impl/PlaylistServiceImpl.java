@@ -39,4 +39,10 @@ public class PlaylistServiceImpl implements PlaylistService {
         });
         return new ArrayList<>(playSet);
     }
+
+    @Override
+    public List<Playlist> getRandomPlaylists() {
+
+        return playlistMapper.getRandomPlaylists(6);
+    }
 }

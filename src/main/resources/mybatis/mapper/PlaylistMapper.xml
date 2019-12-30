@@ -25,4 +25,11 @@
           where p.tag LIKE #{tag}
     </select>
 
+    <select id="getRandomPlaylists" resultMap="playlistMap" parameterType="int">
+        SELECT * FROM playlist
+        WHERE id >= (SELECT floor(RAND() * (SELECT MAX(id) FROM playlist)))
+        ORDER BY id
+        LIMIT 0, #{limit}
+    </select>
+
 </mapper>

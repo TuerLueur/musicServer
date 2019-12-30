@@ -13,4 +13,11 @@
         FROM album b
         WHERE b.name LIKE "%"#{name}"%"
     </select>
+
+    <select id="getAlbumByArtistId" resultMap="albumMap" parameterType="java.math.BigInteger">
+        SELECT b.id, b.name, b.img_src
+        FROM album b, album_artist ba
+        WHERE b.id = ba.album_id
+        AND ba.artist_id = #{aid}
+    </select>
 </mapper>
